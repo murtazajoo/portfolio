@@ -354,18 +354,217 @@ font-family: monospace;
   background-image: url(projectImages/bmi.png);
 }
 
+.inabout{
+  display: flex;
+  flex-direction: column;
+}
+
+.skill{
+  display: grid !important;
+  gap: 30px;
+  grid-template-columns: repeat(2,1fr);
+  /* background-color: rgb(0, 136, 255); */
+}
+.perskill{
+  width:300px;
+  height: 20px ;
+  border-radius: 20px;
+  position: relative;
+  margin: 0 5px;
+  background-color: black;
+  display: flex;
+}
+.oneskill{
+  display: flex;
+}
+.skill h4{
+  color: antiquewhite;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  width: 80px;
+} 
+
+.inskill{
+box-shadow: 0 0 10px 5px rgb(158, 6, 179);
+
+  border-radius: 30px;
+  height: 100%;
+  background-color: blanchedalmond;
+  position: absolute;
+  left: 0;
+  transition: 2s;
+}
+
+
+
+#h2skill{
+  color: aliceblue;
+  margin:0 0  50px 0;
+  font-size:40px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  letter-spacing: 5px !important;
+}
+
+
+#skillhtml{
+  width: 85%;
+}
+
+#skillcss{
+  width: 75%;
+}
+#skilljs{
+  width: 60%;
+}
+#skilleng{
+  width: 85%;
+}
+#skillurdu{
+  width: 97%;
+}
+#skillhindi{
+  width: 98%;
+}
+
+.perskill:hover  div{
+width: 10% !important;
+box-shadow: 0 0 100px 20px white;
+}
 
 
 
 
 
 
+
+
+
+#contact{
+  background-image: url(images/contact.png);
+  display: flex;
+  position: relative;
+flex-direction: column;
+}
+
+
+#contact h1{
+  position: absolute;
+  top: 50px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: sans-serif ;
+  font-size: 50px;
+  letter-spacing: 2px;
+}
+
+.contactlinks{
+  display: grid;
+  
+  grid-template-columns: repeat(4,1fr);
+}
+
+.incontact{
+  width: 200px;
+  height: 200px;
+  display: grid;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+
+}
+
+.incontact img{
+  width: 150px;
+  padding: 35px !important;
+  margin: 0;
+}
+.conimg{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: rgb(201, 201, 201);
+  border: 3px solid rgb(126, 126, 126);
+}
+.contacttype{
+  color: orangered;
+  font-weight: 900;
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-family: monospace;
+}
+
+.incontact a{
+  transition: 1s;
+  text-decoration-thickness: 2px;
+  color: aliceblue;
+}
+.incontact a:hover{
+
+  color: rgb(0, 0, 0);
+}
+
+.loco{
+  position: absolute;
+  bottom:100px ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loco img{
+  width: 50px;
+}
+.loco p a{
+  transition: 0.5s;
+  color: white;
+font-family: monospace;
+font-size: 18px;
+text-decoration: none;
+} 
+
+.loco p a:hover{
+  color: orangered;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:1200px){
+  .perskill{
+    width: 200px;
+  }
+  #h2skill{
+    margin: 0 0 10px 0;
+  }
+  #about div p {
+    margin: 0;
+  }
+}
 
 
 
 
 
 @media(max-width:1100px){
+ 
   .project{
     width: 200px;
   }
@@ -394,6 +593,27 @@ font-family: monospace;
 
 
 @media(max-width:900px){
+  #contact{
+    height: 100%;
+  }
+  .contactlinks{
+    grid-template-columns: repeat(2,1fr);
+  }
+  .incontact{
+    margin: 30px;
+  }
+  #contact h1{
+    position: relative;
+    margin:0 0 50px 0 ;
+  }
+  .loco{
+    position: relative;
+    bottom: 0;
+    margin: 30px;
+  }
+  .perskill{
+    width: 150px;
+  }
   #projects{
     height: 100%;
    grid-template-columns: repeat(3,1fr);
@@ -407,15 +627,18 @@ font-family: monospace;
 }
 
 @media(max-width:850px){
+  #about{
+    padding: 10px;
+  }
 .project{
-  width: 200px;
+  width: 300px;
+  margin: 0 auto;
 }
-.project{
-  margin: 5px;
-}
+
 }
 
 @media(max-width:850px){
+
   #projects{
     height: 100%;
    grid-template-columns: repeat(2,1fr);
@@ -423,13 +646,40 @@ font-family: monospace;
 .project{
   width: 230px;
 }
-.project{
-  margin: 15px;
+
+#about{
+  height :100%;
+}
+#about div{
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+
+}
+#about div img {
+width: 80%;
+}
+.perskill{
+  height: 20px !important;
+  width: 100%;
+}
+.skill{
+  width: 80%;
+  margin: 20px;
 }
 }
 
 
 @media(max-width:600px){
+.skill{
+  grid-template-columns: 1fr;
+}
+  .contactlinks{
+    grid-template-columns: 1fr;
+  }
+  #contact h1{
+    font-size: 30px;
+  }
   #name{
     display: grid;
     align-items: center;
@@ -474,24 +724,11 @@ font-family: monospace;
 
 @media(max-width:560px){
   .project{
-    width: 200px;
-  }
-  .project{
-    margin: 15px;
+    margin: 30px auto !important;
+    width: 80%;
   }
 
-  #about{
-    height :100%;
-  }
-  #about div{
-    display: flex;
-    height: 100%;
-    flex-direction: column;
 
-  }
-  #about div img {
-width: 80%;
-  }
 }
 
 
@@ -501,7 +738,8 @@ width: 80%;
    grid-template-columns: repeat(1,1fr);
 } 
 .project{
-  width: 230px;
+  width: 80%;
+
 }
 .project{
   margin: 15px;
@@ -512,7 +750,6 @@ main{
 
 header{
   position: fixed;
-  bottom: 90px;
   top: 0;
   right: 0;
   width: 100%;
